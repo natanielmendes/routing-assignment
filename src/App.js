@@ -21,8 +21,14 @@ class App extends Component {
             <li>Redirect requests to /all-courses to /courses (=> Your "Courses" page)</li>
           </ol>
           <nav>
-            <NavLink to="/courses">Courses</NavLink>
-            <NavLink to="/users">Users</NavLink>
+            <ul style={{listStyle: 'none', margin: 'auto', padding: '0'}}>
+              <li style={{margin: '10px', display: 'inline-block'}}>
+                <NavLink to="/courses">Courses</NavLink>
+              </li>
+              <li style={{margin: '10px', display: 'inline-block'}}>
+                <NavLink to="/users">Users</NavLink>
+              </li>
+            </ul>
           </nav>
           <Route path="/courses" component={Courses} />
           <Route path="/course" component={Course} />
