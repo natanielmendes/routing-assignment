@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter, Route, NavLink } from 'react-router-dom';
+import { BrowserRouter, Route, NavLink, Switch } from 'react-router-dom';
 
 import Courses from './containers/Courses/Courses';
 import Course from './containers/Course/Course';
@@ -30,9 +30,11 @@ class App extends Component {
               </li>
             </ul>
           </nav>
-          <Route path="/courses" component={Courses} />
-          <Route path="/course" component={Course} />
-          <Route path="/users" component={Users} />
+          <Switch>
+            <Route path="/courses/course" component={Course} />
+            <Route path="/courses" component={Courses} />
+            <Route path="/users" component={Users} />
+          </Switch>
         </div>
       </BrowserRouter>
     );
