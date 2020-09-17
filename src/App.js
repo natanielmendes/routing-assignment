@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import { BrowserRouter, Route, NavLink, Switch } from 'react-router-dom';
 
 import Courses from './containers/Courses/Courses';
-import Course from './containers/Course/Course';
 import Users from './containers/Users/Users';
+import NoMatch from './components/NoMatch/NoMatch';
 
 class App extends Component {
   render () {
@@ -34,6 +34,7 @@ class App extends Component {
             {/* <Route path="/courses/:courseId" component={Course} /> */}
             <Route path="/courses" component={Courses} />
             <Route path="/users" component={Users} />
+            <Route component={NoMatch} />
           </Switch>
         </div>
       </BrowserRouter>
